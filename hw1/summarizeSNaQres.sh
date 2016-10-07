@@ -1,14 +1,10 @@
-#!/bin/bash 
-exec >out.csv
-
-
-### At first get hmax from each file
-for i in {1..9};do 
-grep "hmax" log/timetest$0{i}_snaq.log 
-grep "hmax" out/timetest$0{i}_snaq.out	
-
-
-### print the CPU time 
-ps -e -o %cpu | awk '{s+=$1} END {print s}' 
-
+echo analysis,Hmax,CPU > out6.csv
+for i in log2/*.log;
+do
+        echo "i=$i"
+        analysis=$(echo $i | grep -o -E "[^/]+\.log" | grep -o -E "[^.log]+")
+        h=$(grep "hmax" $i | head -n1 | grep -o -E "[0-9]")
+        CPU=$(grep -E "Elapsed time. [[:digit:]]+" -o out/$analysis.out)
+        echo "analysis=$analysis ; h=$h ; CPU=$CPU"
+    echo "$analysis,$h,$CPU" >> out6.csv
 done

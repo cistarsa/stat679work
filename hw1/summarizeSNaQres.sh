@@ -1,3 +1,5 @@
+#!bin/bash
+
 echo analysis,Hmax,CPU > out6.csv
 for i in log2/*.log;
 do

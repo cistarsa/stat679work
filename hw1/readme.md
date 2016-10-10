@@ -14,4 +14,13 @@ done
 
 #the out directory was untarnished by my cp, so the name remained. here is the script to rename the files in out:
 
+#!/bin/bash
+
+for i in {1..9};do
+cp timetest${i}_snaq.out timetest0${i}_snaq.out
+rm timetest${i}_snaq.out
+
+done
+
+#the above scripts can be found at stat679/hw1/
 

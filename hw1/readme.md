@@ -37,4 +37,4 @@ do
     echo "$analysis,$h,$CPU" >> out5.csv	
 done
 
-#and found at stat679/hw1/summarizeSNaQRes
+#and found at stat679/hw1/summarizeSNaQres

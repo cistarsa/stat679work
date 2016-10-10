@@ -22,5 +22,9 @@ rm timetest${i}_snaq.out
 
 done
 
-#the above scripts can be found at stat679/hw1/
+#the above scripts can be found at stat679/hw1/normalize(logs/out).sh
+
+#for HW1 exercise 2 I used grep and standout to pipe my commands in sequence. The script is:
+
+
 

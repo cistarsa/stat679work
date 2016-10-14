@@ -33,7 +33,7 @@ rm timetest${i}_snaq.out
 done
 ```
 
-### the above scripts can be found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1)
+### the above script can be found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1)
 
 ### for HW1 exercise 2 I used grep and standout to pipe my commands in sequence. 
 ### The script is:

@@ -1,5 +1,6 @@
-#this file will attempt to summarize a few hours of banging my head against the keyboard to find a reasonable "for" loop to execute exercise 1:1.
-#
+###this file will attempt to summarize a few hours of banging my head against the keyboard to find a reasonable "for" loop to execute exercise 1:1.
+
+```shell
 
 #!/bin/bash the Unix "shebang" is required as a header for all bash.sh scripts in order to tell terminal to run these commands in the bash program, notice the bath to the bash program is the bin directory. This is important because bash syntax is slightly different than other programming languages, which have a different header pointed to a different interpreter. 
 
@@ -8,4 +9,5 @@ cp timetest${i}_snaq.out timetest0${i}_snaq.out
 rm timetest${i}_snaq.out
 
 done
-  
+```
+

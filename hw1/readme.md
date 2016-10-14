@@ -32,20 +32,20 @@ rm timetest${i}_snaq.out
 
 done
 ```
+the above script can be found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1)
 
-### the above script can be found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1)
+### HW1 exercise 2 I used grep and standout to pipe my commands in sequence. 
 
-### for HW1 exercise 2 I used grep and standout to pipe my commands in sequence. 
-### The script is:
+ The script is:
 ```
-echo analysis,Hmax,cputime > out5.csv
+echo analysis,Hmax,cputime > out5.csv # to create a .csv with the column names analysis, Hmax..etc.
 
-for i in log/*.log;
+for i in log/*.log; #find all my .log files in the log directory and set a recursive variable $
 do
-	echo "i=$i" 
-	analysis=$(echo $i | grep -o -E "[^/]+\.log" | grep -o -E "[^.log]+")
+	echo "i=$i" # recall the file names, recursively with $
+	analysis=$(echo $i | grep -o -E "[^/]+\.log" | grep -o -E "[^.log]+") #
 	h=$(grep "hmax" $i | head -n1 | grep -o -E "[0-9]")
-	CPU=$(grep -E "Elapsed time. [[:digit:]]+" -o out/$analysis.out | grep -E -o "[[:digit:]]+")	
+	CPU=$(grep -E "Elapsed time. [[:digit:]]+.+" -o timetest02_snaq.out | grep -E -o "[[:digit:]]+\.[[:digit:]]+")	
 	echo "h=$h ; analysis=$analysis ; CPU=$CPU"
     echo "$analysis,$h,$CPU" >> out5.csv	
 done

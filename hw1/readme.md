@@ -23,6 +23,7 @@ done
 
 ### the out directory was untarnished by my cp, so the name remained. here is the script to rename the files in out:
 
+```shell
 #!/bin/bash
 
 for i in {1..9};do
@@ -30,12 +31,15 @@ cp timetest${i}_snaq.out timetest0${i}_snaq.out
 rm timetest${i}_snaq.out
 
 done
+```
 
-### the above scripts can be found at stat679/hw1/normalize(logs/out).sh
+### the above scripts can be found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1)
 
-### for HW1 exercise 2 I used grep and standout to pipe my commands in sequence. The script is:
-
+### for HW1 exercise 2 I used grep and standout to pipe my commands in sequence. 
+### The script is:
+```
 echo analysis,Hmax,cputime > out5.csv
+
 for i in log/*.log;
 do
 	echo "i=$i" 
@@ -45,5 +49,7 @@ do
 	echo "h=$h ; analysis=$analysis ; CPU=$CPU"
     echo "$analysis,$h,$CPU" >> out5.csv	
 done
+```
 
-### and found at stat679/hw1/summarizeSNaQres
+### and found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1)
+

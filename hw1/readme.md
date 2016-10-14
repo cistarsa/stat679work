@@ -9,29 +9,26 @@ I began exercise 1 using my MacBook OSX 10.7.5 and as up-to-date libraries as po
 
 ### first try
 
-After copying (cp) the log directory onto my desktop, I had uninentially deleted the original log directory. So, in order to mitigate further confusion I renamed log to log2. My script to rename the files in the log2 directory is:
+After copying (cp) the log directory onto my desktop, I had uninentially deleted the original log directory. So, in order to mitigate further confusion I renamed log to log2. My script to rename the files in the log2 directory is, and should be run from hw1/log2:
 
 ```shell
 #!/bin/bash
 
 for i in {1..9};do
-cp timetest${i}_snaq.log timetest0${i}_snaq.log
-rm timetest${i}_snaq.log 
-
+	mv timetest${i}_snaq.log timetest0${i}_snaq.log 
 done
 ```
 
-### the out directory was untarnished by my cp, so the name remained. here is the script to rename the files in out:
+the out directory was untarnished by my cp, so the name remained. here is the script to rename the files in out and should be run from hw1/out:
 
 ```shell
 #!/bin/bash
 
 for i in {1..9};do
-cp timetest${i}_snaq.out timetest0${i}_snaq.out
-rm timetest${i}_snaq.out
-
+	mv timetest${i}_snaq.out timetest0${i}_snaq.out
 done
 ```
+
 the above script can be found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1)
 
 ### HW1 exercise 2 I used grep and standout to pipe my commands in sequence. 

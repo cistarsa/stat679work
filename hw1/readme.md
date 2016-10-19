@@ -50,7 +50,9 @@ done
 
 ### and found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1)
 
-## For Exercise 3 we must create a .csv file, like we did in exercise 2, but using more involved commands like an ```if``` loop, ```sed, basename``` and ```cut````. The updated summarizeSNaQres.sh script can be found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1). With the output .csv [at](https://github.com/kingcohn1/stat679work/blob/master/HW13.csv).
+## For Exercise 3 
+
+We must create a .csv file, like we did in exercise 2, but using more involved commands like an ```if``` loop, ```sed, basename``` and ```cut````. The updated summarizeSNaQres.sh script can be found [here](https://github.com/kingcohn1/stat679work/tree/master/hw1/summarizeSNaQres.sh). With the output .csv [at](https://github.com/kingcohn1/stat679work/blob/master/hw1/HW13.csv).
 
 I had issues syncing my local directory with my github repository, but was able to resolve this by:
 

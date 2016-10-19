@@ -4,7 +4,7 @@ set -u # terminates if any variable is unset
 set -o pipefail
 
 echo analysis,nRuns,nFail,fabs,frel,xabs,xrel,seed,under3460,under3450,under3440 > HW13.csv
-for i in log2/*.log; #change log2-->log, if running locally or outside of my directory
+for i in log/*.log; #change log2-->log, if running locally or outside of my directory
 do
 	analysis=$(basename -s ".log" "$i") # this establishes my basename variable for commands downstream
 	h=$(grep "hmax" $i | head -n1 | grep -o -E "[0-9]") # the grep command pulls a specific string"hmax" from my file directory. After isolating the string specificed, it then pulls the integer associated with hmas.

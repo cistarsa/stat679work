@@ -19,7 +19,7 @@ do
 	
 echo $analysis,$h,$CPU_time,$nRuns,$nFail,$fabs,$frel,$xabs,$xrel,$seed 
 
-l=$(sed -nE 's/.*-loglik=([0-9,]+).*/\1/p' $i) # sed again is used isolate the loglik values in my files that match initial $i variable, which are then piped into if statements. Here, sed is better than grep as it is able to read the files and execute commands simultaneously. As opposed to grep. 
+l=$(sed -nE 's/.*-loglik=([0-9,]+).*/\1/p' $filename) # sed again is used isolate the loglik values in my files that match initial $i variable, which are then piped into if statements. Here, sed is better than grep as it is able to read the files and execute commands simultaneously. As opposed to grep. 
 a=0
 b=0
 c=0
@@ -39,6 +39,6 @@ echo $l,$a
 	 c=$((c+1))
 	fi
 done
-echo $analysis,$Nruns,$Nfail,$fabs,$frel,$xabs,$xrel,$seed,$a,$b,$c >> HW13.csv # prints the values from previous commands, stored as standard output, to a csv file: HW13.csv 
+echo $analysis,$h,$CPU_time,$nRuns,$nFail,$fabs,$frel,$xabs,$xrel,$seed,$a,$b,$c >> HW13.csv # prints the values from previous commands, stored as standard output, to a csv file: HW13.csv 
 
 done #fin

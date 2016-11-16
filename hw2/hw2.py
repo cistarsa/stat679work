@@ -114,19 +114,16 @@ else:
                             for j in range(len(merge_list)):
                                 output.write(merge_list[j])
                                 output.write('\n')
-                    else: #if choose to overwriting it.
-                        with open(file_out,'w') as output: #'w' will let us overwrite the file.
-                            #for i in range(len(header_list)-2):#write the headers.
+                    else: 
+                        with open(file_out,'w') as output: #'w' will let us overwrite the file, write the headers.
                             output.write(','.join(header_list)+'\n')
                             for k in range(len(merge_list)):#write the merged data.
                                 output.write(merge_list[k])
                                 output.write('\n')
 
-                else: # if the filename is a totally new one, then open and write it directly.                                          
+                else: # if new file, then open and write it directly.                                          
                     with open(file_out,'w') as output:
-                        for i in range(len(header_list)):
-                            output.write(','.join(header_list)+'\n')
-                            output.write('\n')
+                        output.write(','.join(header_list)+'\n')
                         for k in range(len(merge_list)):
                             output.write(merge_list[k])
                             output.write('\n')
